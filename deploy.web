@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Simple deploy script for Firebase Hosting
+firebase deploy --only hosting

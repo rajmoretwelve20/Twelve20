@@ -1,0 +1,9 @@
+{
+  "name": "twelve20-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "echo \"Static site - open index.html\"",
+    "deploy.web": "node tools/deploy-web.js"
+  }
+}
