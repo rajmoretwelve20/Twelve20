@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://twelve20.web.app/sitemap.xml
