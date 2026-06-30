@@ -1,32 +1,30 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process');
-const fs = require('fs');
 
-function run(cmd){
+function run(cmd) {
   console.log('> ' + cmd);
-  execSync(cmd, {stdio: 'inherit'});
+  execSync(cmd, { stdio: 'inherit' });
 }
 
-try{
-  // Stage all changes
+try {
   run('git add -A');
 
-  // Commit with a message including timestamp
   const msg = `site: deploy ${new Date().toISOString()}`;
   try {
     run(`git commit -m "${msg}"`);
-  } catch(e){
+  } catch (e) {
     console.log('No changes to commit. Continuing.');
   }
 
-  // Push to current remote
-  run('git push');
+  try {
+    run('git push');
+  } catch (e) {
+    console.log('Git push failed. Continuing to Firebase deploy.');
+  }
 
-  // Deploy to Firebase
   run('firebase deploy --only hosting');
-
   console.log('\nDeployment complete.');
-}catch(err){
+} catch (err) {
   console.error('Deploy script failed:', err.message);
   process.exit(1);
 }
