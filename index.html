@@ -13,32 +13,33 @@
         }
 
         /* Color palette
-           - burnt orange: #FF6A2B (titles)
-           - deep purple: #1e1840 (background)
-           - mid purple:  #2f234f (panels)
-           - light blue:  #7fb3ff (accents/links)
+           - warm orange: #FF7E3F (refined titles)
+           - navy blue: #14192c (elegant background)
+           - slate panel: #1f2845 (distinct panels)
+           - refined purple: #8b75ff (interactive accents)
+           - bright cyan: #5fc7ff (link accents)
         */
 
         :root{
-            --title-orange: #FF6A2B; /* burnt orange */
-            --bg-deep: #0f1224; /* darker navy background like Eventrax */
-            --panel: #24183a; /* deep purple panels */
-            --accent: #7a66ff; /* violet/purple accent (buttons) */
-            --accent-light: #7fb3ff; /* light-blue accent for links */
-            --muted: #bfc7e6;
-            --text: #e6e9f6;
+            --title-orange: #FF7E3F; /* warm refined burnt orange */
+            --bg-deep: #14192c; /* elegant navy-blue background */
+            --panel: #1f2845; /* distinct slate panel */
+            --accent: #8b75ff; /* refined purple accent (buttons) */
+            --accent-light: #5fc7ff; /* bright cyan accent for links */
+            --muted: #a8b5d4;
+            --text: #e8eef7;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: var(--text);
-            background: linear-gradient(180deg, var(--bg-deep) 0%, #19132b 100%);
+            background: linear-gradient(180deg, var(--bg-deep) 0%, #192240 100%);
             padding-bottom: 4rem;
         }
 
         header {
-            background: linear-gradient(90deg, rgba(36,24,58,0.95), rgba(20,16,40,0.95));
+            background: linear-gradient(90deg, rgba(31,40,69,0.95), rgba(20,25,44,0.95));
             padding: 2rem 0;
             margin-bottom: 2.5rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.4);
@@ -78,7 +79,7 @@
             background-color: rgba(255,255,255,0.03);
             padding: 1.75rem;
             border-radius: 8px;
-            border: 1px solid rgba(127,179,255,0.06);
+            border: 1px solid rgba(95,199,255,0.08);
             box-shadow: 0 6px 18px rgba(10,8,20,0.35) inset;
         }
 
@@ -129,7 +130,7 @@
         .contact-info {
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(127,179,255,0.06);
+            border-top: 1px solid rgba(95,199,255,0.08);
         }
 
         /* small responsive tweaks */
